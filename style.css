@@ -48,7 +48,8 @@ body
 /* header */
 .header
 {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -210,3 +211,90 @@ div.button
     color: black;
 }
 /* information */
+
+/* customer-logos */
+.customer-logos
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 30px;
+}
+
+.customer-logos span
+{
+    color:#171321;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.customer-logos a img
+{
+    filter: grayscale(100%);
+    width: 100%;
+}
+/* customer-logos */
+
+/*platform */
+.platform
+{
+    /* margin-left: -96px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.platform h3
+{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 48px;
+}
+.platform p
+{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+/* platform */
+
+/* convenience */
+.convenience
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    margin-top: 64px;
+}
+
+.convenience h5
+{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px
+}
+
+.convenience p
+{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px
+}
+
+.convenience p a
+{
+    color: #7759c2;
+    text-decoration: none;
+}
+
+.convenience p a:hover
+{
+    text-decoration: underline;
+}
+/* convenience */
