@@ -1,0 +1,156 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Inter,"sans-serif";
+    color: #171321;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* banner */
+.banner
+{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171321;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.banner-title
+{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 24px;
+}
+
+.banner-learn-more
+{
+    color: white;
+    font-weight: 400;
+    margin-left: 24px;
+    padding-left: 0;
+    text-underline-offset: 2px;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 11px 16px;
+}
+/* banner */
+
+/* header */
+.header
+{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 4px 24px 16px;
+}
+
+.header-list
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.header-list div
+{
+    display: inline-flex;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 8px;
+    background-color: transparent;
+    align-items: center;
+    text-align: center;
+    color: #74717a;
+}
+
+.header-list a
+{
+    text-decoration: none;
+    color: #74717a;
+}
+
+div.button
+{
+    display: inline-flex;
+    background-color: #171321;
+    border: 1px solid #171321;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 11px 16px;
+    text-align: center;
+}
+
+.button:hover
+{
+    background-color: white;
+    color: #171321;
+}
+/* header */
+
+/* information */
+.information
+{
+    display: flex;
+    padding: 64px 96px 96px;
+    position: relative;
+    animation: move 1s ease 0.5s forwards;
+}
+
+@keyframes move 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.information-title
+{
+    flex: 0 0 460px;
+    margin-right: 40px;
+    margin-left: 64px;
+    max-width: 460px;
+}
+
+.information-title h1
+{
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1.4px;
+    line-height: 60px;
+}
+.information-title h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.information-title.button
+{
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+/* information */
