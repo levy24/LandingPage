@@ -55,6 +55,7 @@ body
     justify-content: space-between;
     background-color: white;
     padding: 4px 24px 16px;
+    z-index: 1000;
 }
 
 .header-list
@@ -152,5 +153,58 @@ div.button
 {
     margin-top: 24px;
     margin-bottom: 16px;
+}
+
+.information-img
+{
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-right: 40px;
+    max-width: 460px;
+    padding: 24px;
+}
+
+.information-img img
+{
+    margin-bottom: 16px;
+}
+
+.information-img div
+{
+    align-items: center;
+    border: 1px solid #7759c2;
+    color: white;
+    background-color: #7759c2;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 16px;
+    border-radius: 90px;
+    width: fit-content;
+    padding: 4px 12px;
+}
+
+.information-img h2
+{
+    padding-top: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.information-img a.information-img-learn-more
+{
+    margin: auto 0 0;
+    padding: 11px 16px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 0;
+    text-decoration: none;
+    color: black;
 }
 /* information */
