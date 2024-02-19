@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 body {
-    font-family: Inter, "sans-serif";
+    font-family: Arial, Helvetica, sans-serif;
     color: #171321;
     font-size: 16px;
     font-weight: 400;
@@ -209,19 +211,13 @@ div.button {
 /* information */
 
 /* customer-logos */
-.customer-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 30px;
-}
 
 .customer-logos_companies {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    margin: 30px;
 }
 
 .customer-logos_companies a {
@@ -242,16 +238,7 @@ div.button {
     line-height: 20px;
 }
 
-.customer-logos span {
-    color: #171321;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.customer-logos a img {
+.customer-logos_companies a img {
     filter: grayscale(100%);
     width: 100%;
 }
@@ -363,7 +350,7 @@ div.button {
     display: inline-flex;
     margin-top: 16px;
     padding: 8px 24px;
-    width: 100%;
+    height: 50px;
 }
 
 .feature-showcase_pill p {
@@ -379,13 +366,94 @@ div.button {
 }
 
 /* feature-showcase */
-@media screen and (min-width: 1170px) {
-    .customer-logos {
-        max-width: 1170px;
-        padding: 0;
-    }
+
+/* tabbed-feature */
+.tabbed-feature {
+    background: #171321;
 }
 
+
+.tabbed-feature h2,
+.tabbed-feature p {
+    /* color: linear-gradient(91.08deg,#feb484 1.97%,#a686f2 27.88%,#592ac8 65.98%); */
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -.8px;
+    line-height: 40px;
+    max-width: 800px;
+    padding-left: 32px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.tabbed-feature-tabs {
+    display: flex;
+    padding: 64px;
+    padding-left: 32px;
+}
+
+.tabbed-feature-tabs_purple {
+    background-color: #7759c2;
+    color: white;
+    border-radius: 90px;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+    margin-right: 24px;
+}
+
+.tabbed-feature-tabs_grey {
+    background-color: #45424d;
+    color: white;
+    border-radius: 90px;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+    margin-right: 24px;
+}
+
+.tabbed-feature-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tabbed-feature-col {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -.8px;
+    line-height: 32px;
+    margin-bottom: 48px;
+    color: #7759c2;
+}
+
+.tabbed-feature-col p {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -.8px;
+    line-height: 32px;
+    margin-bottom: 48px;
+}
+
+.tabbed-feature-col div{
+    padding-left: 32px;
+}
+
+.tabbed-feature-col a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    margin-bottom: 32px;
+}
+/* tabbed-feature */
+
+/* tabbed-case-studies__wrapper */
+.tabbed-case-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+}
+/* tabbed-case-studies__wrapper */
 @media screen and (min-width: 1024px) {
     .information {
         padding: 64px 32px 96px;
@@ -480,11 +548,6 @@ div.button {
     }
 }
 
-@media screen and (max-width: 640px) {
-    .customer-logos {
-        max-width: 95%;
-    }
-}
 
 @media screen and (max-width: 576px) {
     .platform img {
