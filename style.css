@@ -1,11 +1,10 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     color: #171321;
     font-size: 16px;
     font-weight: 400;
@@ -113,6 +112,8 @@ div.button {
 
 /* information */
 .information {
+    background-image: url(https://about.gitlab.com/nuxt-images/home/gradient.png);
+    background-size: 100% 1400px;
     display: flex;
     padding: 32px 32px 64px;
     position: relative;
@@ -316,6 +317,7 @@ div.button {
 /* feature-showcase */
 .feature-showcase {
     display: flex;
+    position: absolute;
 }
 
 .feature-showcase_row {
@@ -370,6 +372,8 @@ div.button {
 /* tabbed-feature */
 .tabbed-feature {
     background: #171321;
+    margin-top: 450px;
+    padding-top: 150px;
 }
 
 
@@ -433,7 +437,7 @@ div.button {
     margin-bottom: 48px;
 }
 
-.tabbed-feature-col div{
+.tabbed-feature-col div {
     padding-left: 32px;
 }
 
@@ -444,16 +448,105 @@ div.button {
     transition: all .2s ease-in-out;
     margin-bottom: 32px;
 }
+
 /* tabbed-feature */
 
 /* tabbed-case-studies__wrapper */
-.tabbed-case-logo{
+.tabbed-case-logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     overflow-x: scroll;
+    position: relative;
+    margin-bottom: 64px;
+    margin-right: auto;
 }
+
+.tabbed-case-logo img {
+    height: 74px;
+    margin-right: 32px;
+    padding-bottom: 24px;
+}
+
+.case-study-tabpanel {
+    display: flex;
+}
+
+/* Read more */
+/* .case-study-tabpanel-0 a {
+    text-decoration: none;
+    color: #171321;
+    margin-left: 32px;
+    transition: all .2s ease-in-out;
+    font-family: Inter,"sans-serif";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 11px 16px;
+    text-align: center;
+} */
+
+.case-study-tabpanel-0{
+    width: 50%;
+}
+
+.case-study-tabpanel-1 {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+    margin: 0 32px;
+}
+
+.case-study-tabpanel-1 p {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 48px;
+    margin-bottom: 48px;
+}
+
+.case-study-tabpanel-1 p a {
+    color: #7759c2;
+    text-decoration: none;
+}
+
+.case-study-tabpanel-1 p a:hover {
+    text-decoration: underline;
+}
+
+.ma-bott-32 {
+    margin-bottom: 32px;
+}
+
+.tabbed-case-studies__pill {
+    align-items: center;
+    background: #f6f3fe;
+    display: flex;
+    border-radius: 90px;
+    margin-top: 16px;
+    padding: 8px 24px;
+    height: 50px;
+    margin-left: 32px;
+}
+
+.tabbed-case-studies__pill h5 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -.8px;
+    line-height: 80px;
+}
+
+.tabbed-case-studies__pill p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
 /* tabbed-case-studies__wrapper */
+
 @media screen and (min-width: 1024px) {
     .information {
         padding: 64px 32px 96px;
@@ -548,6 +641,15 @@ div.button {
     }
 }
 
+@media screen and (min-width: 576px) {
+    .tabbed-case-logo {
+        margin: 96px auto;
+    }
+
+    .tabbed-case-studies__pill {
+        min-width: 80%;
+    }
+}
 
 @media screen and (max-width: 576px) {
     .platform img {
