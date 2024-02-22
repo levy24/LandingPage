@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -9,6 +9,10 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+p {
+    margin: 0;
 }
 
 /* banner */
@@ -101,6 +105,8 @@ div.button {
     line-height: 20px;
     padding: 11px 16px;
     text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
 }
 
 .button:hover {
@@ -159,7 +165,7 @@ div.button {
 }
 
 .information-img {
-    background-color: linear-gradient(176deg, hsla(0, 0%, 100%, .75), hsla(0, 0%, 100%, .4));
+    background: linear-gradient(176deg, hsla(0, 0%, 100%, .75), hsla(0, 0%, 100%, .4));
     border-radius: 9px;
     display: flex;
     flex-direction: column;
@@ -236,7 +242,17 @@ div.button {
     color: #5a5761;
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 24px;
+}
+
+.customer-logos_trusted-by a{
+    color: #171321;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .customer-logos_companies a img {
@@ -452,14 +468,18 @@ div.button {
 /* tabbed-feature */
 
 /* tabbed-case-studies__wrapper */
+.tabbed-case-studies__wrapper {
+    margin: 64px auto;
+}
+
 .tabbed-case-logo {
     display: flex;
     justify-content: space-around;
     align-items: center;
     overflow-x: scroll;
     position: relative;
-    margin-bottom: 64px;
-    margin-right: auto;
+    margin-bottom: 32px;
+    margin-right: -16px;
 }
 
 .tabbed-case-logo img {
@@ -472,22 +492,21 @@ div.button {
     display: flex;
 }
 
-/* Read more */
-/* .case-study-tabpanel-0 a {
+a.info {
     text-decoration: none;
     color: #171321;
-    margin-left: 32px;
     transition: all .2s ease-in-out;
-    font-family: Inter,"sans-serif";
+    font-family: Inter, "sans-serif";
     font-size: 18px;
     font-weight: 600;
     line-height: 20px;
     padding: 11px 16px;
     text-align: center;
-} */
+}
 
-.case-study-tabpanel-0{
+.case-study-tabpanel-0 {
     width: 50%;
+    margin-right: 32px;
 }
 
 .case-study-tabpanel-1 {
@@ -537,6 +556,7 @@ div.button {
     font-weight: 600;
     letter-spacing: -.8px;
     line-height: 80px;
+    margin-right: 8px;
 }
 
 .tabbed-case-studies__pill p {
@@ -545,9 +565,205 @@ div.button {
     line-height: 20px;
 }
 
+.tabbed-case-studies__card {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    position: relative;
+    width: 50%;
+}
+
+.tabbed-case-studies__quote {
+    background-color: #f6f3fe;
+    border-radius: 8px;
+    margin-right: 40px;
+    padding: 24px;
+    margin-bottom: 0;
+}
+
+.say {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.author {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 32px;
+}
+
+.Company {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-right: 106px;
+}
+
+.tabbed-case-studies__headshot {
+    position: absolute;
+    border-radius: 4.4px 4.4px 60px 4.4px;
+    height: 154px;
+    width: 154px;
+    bottom: -62px;
+    right: 0;
+}
+
+.tabbed-case-studies__headshot img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
 /* tabbed-case-studies__wrapper */
 
+/* recognition-spotlight */
+.recognition-spotlight {
+    background-image: url(https://about.gitlab.com/nuxt-images/home/bottom-gradient.png);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    padding: 0 0 96px;
+    position: relative;
+    z-index: 0;
+}
+
+.recognition-spotlight::before {
+    background: linear-gradient(1turn, #fff, hsla(0, 0%, 100%, .75) 24.94%, hsla(0, 0%, 100%, 0));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: -1px;
+    transform: scale(-1);
+    width: 100%;
+    z-index: -1;
+}
+
+.recognition-spotlight-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recognition-spotlight-leading {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+}
+
+.recognition-spotlight-leading h2 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1.4px;
+    line-height: 60px;
+    margin: 0;
+}
+
+.recognition-spotlight-data {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+}
+
+.recognition-spotlight-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px auto;
+}
+
+.recognition-spotlight-stat:first-of-type {
+    margin-right: 32px;
+}
+
+p.stat1 {
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2.1px;
+    line-height: 72px;
+}
+
+p.stat2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.recognition-spotlight__wrapper {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 16px 16px;
+    margin-bottom: 64px;
+}
+
+.recognition-spotlight__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    margin-bottom: 16px;
+    padding: 32px;
+    border-radius: 0;
+}
+
+.recognition-spotlight__card:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+.recognition-spotlight__card:last-of-type {
+    grid-column: 2/span 1;
+    grid-row: 1/span 2;
+    border-radius: 0 0 90px 8px;
+    padding: 32px 16px;
+}
+
+.recognition-spotlight__card img {
+    margin-bottom: 24px;
+}
+
+.recognition-spotlight__card p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 32px;
+}
+
+p.rank{
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -.8px;
+    line-height: 40px;
+}
+.recognition-spotlight__badges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    gap: 42px;
+}
+.recognition-spotlight__badges img{
+    width: 76px;
+}
+/* recognition-spotlight */
+@media screen and (min-width: 1170px) {
+    .slp-container {
+        max-width: 1170px;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (min-width: 1024px) {
+    .slp-container {
+        max-width: 1024px;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .information {
         padding: 64px 32px 96px;
     }
@@ -606,6 +822,23 @@ div.button {
     .customer-logos_companies {
         justify-content: space-between;
     }
+
+    .recognition-spotlight-stats {
+        margin: 0 0 96px;
+    }
+
+    .recognition-spotlight__card {
+        border-radius: 8px 0 0 0;
+        margin-bottom: 0;
+    }
+
+    .recognition-spotlight__card:last-of-type {
+        border-radius: 0 8px 90px 0;
+        padding: 32px 48px;
+    }
+    .recognition-spotlight__badges img{
+        width: 96px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -641,13 +874,43 @@ div.button {
     }
 }
 
+@media screen and (min-width: 640px) {
+    .slp-container {
+        max-width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 @media screen and (min-width: 576px) {
     .tabbed-case-logo {
-        margin: 96px auto;
+        margin-bottom: 64px;
+        margin-right: auto;
     }
 
     .tabbed-case-studies__pill {
         min-width: 80%;
+    }
+
+    .tabbed-case-studies__card {
+        margin-top: 0px;
+    }
+
+    .tabbed-case-studies__quote {
+        padding: 48px;
+    }
+
+    .tabbed-case-studies__headshot {
+        bottom: -32px;
+    }
+
+    .tabbed-case-studies__wrapper {
+        margin: 96px auto;
+    }
+
+    .recognition-spotlight {
+        background-size: 100% 100%;
+        padding: 64px 0 96px;
     }
 }
 
