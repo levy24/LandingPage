@@ -15,7 +15,7 @@ p {
     margin: 0;
 }
 
-ul{
+ul {
     list-style: none;
     padding: 0;
 }
@@ -56,6 +56,8 @@ ul{
 .header {
     position: sticky;
     top: 0px;
+    right: 0;
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -358,12 +360,43 @@ div.button {
     padding: 32px 24px;
 }
 
+.feature-showcase_card a {
+    color: #171321;
+    text-decoration: none;
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    min-width: 68px;
+    padding: 11px 16px;
+}
+
+.feature-showcase_card p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
 .heading5 {
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -.6px;
     line-height: 32px;
     margin-right: 8px;
+}
+
+.heading5 a {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+    line-height: 32px;
+    color: #7759c2;
+    padding: 0;
+}
+
+.heading5 a:hover {
+    text-decoration: underline;
 }
 
 .feature-showcase_pill {
@@ -382,12 +415,6 @@ div.button {
     line-height: 20px;
 }
 
-.feature-showcase_card p {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24px;
-}
-
 /* feature-showcase */
 
 /* tabbed-feature */
@@ -398,24 +425,32 @@ div.button {
 }
 
 
-.tabbed-feature h2,
-.tabbed-feature p {
-    /* color: linear-gradient(91.08deg,#feb484 1.97%,#a686f2 27.88%,#592ac8 65.98%); */
-    color: white;
+.tabbed-feature h2 {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(91.08deg, #feb484 1.97%, #a686f2 27.88%, #592ac8 65.98%);
+    background-clip: text;
+    -webkit-background-clip: text;
     font-size: 32px;
     font-weight: 600;
     letter-spacing: -.8px;
     line-height: 40px;
     max-width: 800px;
-    padding-left: 32px;
     margin-top: 16px;
     margin-bottom: 0;
 }
 
+.tabbed-feature p {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1.4px;
+    line-height: 60px;
+    max-width: 800px;
+}
+
 .tabbed-feature-tabs {
     display: flex;
-    padding: 64px;
-    padding-left: 32px;
+    padding: 64px 0;
 }
 
 .tabbed-feature-tabs_purple {
@@ -425,6 +460,10 @@ div.button {
     padding: 8px 24px;
     transition: all 0.3s ease;
     margin-right: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+    line-height: 32px;
 }
 
 .tabbed-feature-tabs_grey {
@@ -434,6 +473,10 @@ div.button {
     padding: 8px 24px;
     transition: all 0.3s ease;
     margin-right: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+    line-height: 32px;
 }
 
 .tabbed-feature-row {
@@ -458,16 +501,18 @@ div.button {
     margin-bottom: 48px;
 }
 
-.tabbed-feature-col div {
-    padding-left: 32px;
-}
-
-.tabbed-feature-col a {
+.tabbed-feature-col div a {
     display: inline-block;
     color: #fff;
     text-decoration: none;
     transition: all .2s ease-in-out;
     margin-bottom: 32px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    min-width: 68px;
+    padding: 11px 16px;
 }
 
 /* tabbed-feature */
@@ -479,7 +524,7 @@ div.button {
 
 .tabbed-case-logo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     overflow-x: scroll;
     position: relative;
@@ -521,7 +566,6 @@ a.info {
     min-height: 1px;
     position: relative;
     width: 100%;
-    margin: 0 32px;
 }
 
 .case-study-tabpanel-1 p {
@@ -553,7 +597,6 @@ a.info {
     margin-top: 16px;
     padding: 8px 24px;
     height: 50px;
-    margin-left: 32px;
 }
 
 .tabbed-case-studies__pill h5 {
@@ -866,10 +909,9 @@ a.pricing {
     /* flex-wrap: wrap; */
     align-items: flex-start;
     justify-content: space-between;
-    gap: 30px;
 }
 
-.be-nav-footer.logo {
+.logo {
     display: flex;
     margin: 0 auto 0 0;
 }
@@ -877,9 +919,9 @@ a.pricing {
 .content {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: space-between;
     margin-top: 48px;
+    gap: 30px;
 }
 
 .column {
@@ -889,15 +931,18 @@ a.pricing {
     width: 100%;
 }
 
-.column div h3 {
+.footer__navigation h3 {
     margin-bottom: 16px;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
+    margin-top: 0;
 }
+
 .links-item {
     margin-bottom: 8px;
 }
+
 .link {
     color: #fff;
     font-size: 14px;
@@ -906,8 +951,62 @@ a.pricing {
     padding-left: 0;
 }
 
-.link:hover{
+.link:hover {
     text-decoration: underline;
+}
+
+.footer__cta {
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+}
+
+.footer__selectors {
+    align-items: baseline;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+}
+
+.language_selector {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links-items {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+
+.social__links--icon {
+    color: #fff;
+    height: auto;
+    transition: .3s;
+    width: 24px;
+}
+
+.source p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.be-nav-footer__source-buttons {
+    display: flex;
+    gap: 8px 24px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.be-nav-footer__source-buttons a {
+    color: #fff;
+    font-weight: 600;
 }
 
 /* footer */
@@ -951,6 +1050,10 @@ a.pricing {
 
     .next-step-alt__container {
         padding: 64px;
+    }
+
+    .be-nav-footer {
+        margin-top: 500px;
     }
 }
 
@@ -1030,6 +1133,31 @@ a.pricing {
     .be-nav-footer .column {
         max-width: 160px;
     }
+
+    .logo {
+        flex: 0 0 16.6666666667%;
+        max-width: 16.6666666667%;
+        min-height: 1px;
+        position: relative;
+        width: 100%;
+    }
+
+    .content {
+        flex: 0 0 83.3333333333%;
+        max-width: 83.3333333333%;
+        min-height: 1px;
+        position: relative;
+        width: 100%;
+    }
+
+    .footer__cta {
+        padding-top: 96px;
+    }
+
+    .footer__selectors {
+        flex-direction: row;
+    }
+
 }
 
 @media screen and (max-width: 835px) {
@@ -1100,5 +1228,11 @@ a.pricing {
         padding: 0;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .content {
+        margin-top: 0;
     }
 }
