@@ -19,7 +19,14 @@ ul {
     list-style: none;
     padding: 0;
 }
-
+.desktop{
+    display: block;
+}
+.mobile{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
 /* banner */
 .banner {
     height: 52px;
@@ -497,6 +504,11 @@ div.button {
     flex-wrap: nowrap;
 }
 
+.tabbed-feature-row img{
+    width: 100%;
+    height: 100%;
+}
+
 .tabbed-feature-col {
     font-size: 24px;
     font-weight: 400;
@@ -911,7 +923,7 @@ a.pricing {
     background-color: #171321;
     color: #fff;
     padding: 40px 16px;
-    margin-top: 250px;
+    margin-top: 280px;
 }
 
 .footer__navigation {
@@ -936,6 +948,8 @@ a.pricing {
 }
 
 .column {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
     max-width: 150px;
     min-width: 2rem;
@@ -1026,6 +1040,15 @@ a.pricing {
     .platform img {
         display: none;
     }
+
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -1085,9 +1108,9 @@ a.pricing {
         justify-content: center;
         margin-top: 16px;
         width: 100%;
-    } 
+    }
 
-    .platform-flex{
+    .platform-flex {
         flex-wrap: wrap;
     }
 
@@ -1114,51 +1137,69 @@ a.pricing {
         padding-left: 0;
     }
 
-    .feature-showcase_card{
+    .feature-showcase_card {
         flex-wrap: wrap;
     }
 
-    .tabbed-feature-row{
+    .tabbed-feature {
+        padding-top: 650px;
+    }
+
+    .tabbed-feature-row {
         flex-wrap: wrap;
     }
 
-    .case-study-tabpanel{
+    .case-study-tabpanel {
         flex-wrap: wrap;
         width: 100%;
     }
 
-    .recognition-spotlight-row{
+    .recognition-spotlight-row {
         flex-wrap: wrap;
     }
-    .recognition-spotlight-leading{
+
+    .recognition-spotlight-leading {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .recognition-spotlight-data{
+
+    .recognition-spotlight-data {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    
+
     .recognition-spotlight__wrapper {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
 
-    .recognition-spotlight__badges{
+    .recognition-spotlight__badges {
         gap: 0;
     }
 
-    .next-step-alt__col-wrapper{
+    .next-step-alt__col-wrapper {
         flex-wrap: wrap;
     }
 
-    .slp-row{
+    .slp-row {
         flex-wrap: wrap;
     }
 
-    .convenience-list{
+    .convenience-list {
         margin-bottom: 32px;
+    }
+
+    .column {
+        align-items: flex-start;
+        gap: 30px;
+        justify-content: space-between;
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .be-nav-footer {
+        margin-top: 650px;
     }
 }
 
@@ -1181,9 +1222,9 @@ a.pricing {
         border-radius: 0 0 90px 0;
     }
 
-    /* .tabbed-features{
-        padding: 96px 0 64px;
-    } */
+    .tabbed-feature {
+        margin-top: 840px;
+    }
 
     .recognition-spotlight-stats {
         margin: 0 0 96px;
@@ -1275,7 +1316,6 @@ a.pricing {
     .information-title {
         margin-left: 0px;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -1302,6 +1342,7 @@ a.pricing {
         max-width: 1024px;
         padding: 0;
     }
+
 }
 
 @media screen and (min-width: 1170px) {
@@ -1316,5 +1357,9 @@ a.pricing {
 @media screen and (min-width: 1220px) {
     .content {
         margin-top: 0;
+    }
+
+    .be-nav-footer {
+        flex-direction: row;
     }
 }
