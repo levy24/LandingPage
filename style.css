@@ -235,7 +235,7 @@ div.button {
     margin: 30px;
 }
 
-.logo-company{
+.logo-company {
     margin: 8px;
     flex: 0 1 110px;
     width: 110px;
@@ -266,10 +266,11 @@ div.button {
 /* customer-logos */
 
 /*platform */
-.platform-flex{
+.platform-flex {
     display: flex;
-    
+
 }
+
 .platform-title {
     padding-left: 96px;
 }
@@ -305,7 +306,7 @@ div.button {
     /* margin-left: 32px; */
 }
 
-.slp-row{
+.slp-row {
     display: flex;
     flex-wrap: nowrap;
 }
@@ -315,15 +316,16 @@ div.button {
 }
 
 .convenience-list h5 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 24px
+    line-height: 28px;
+    margin: 0;
 }
 
 .convenience-list p {
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px
+    line-height: 24px
 }
 
 .convenience-list p a {
@@ -347,6 +349,9 @@ div.button {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.feature-showcase_row:last-child {
     padding-left: 16px;
 }
 
@@ -375,6 +380,10 @@ div.button {
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.feature-showcase_card svg {
     margin-bottom: 16px;
 }
 
@@ -413,6 +422,7 @@ div.button {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
+    margin-bottom: 0;
 }
 
 /* feature-showcase */
@@ -420,8 +430,11 @@ div.button {
 /* tabbed-feature */
 .tabbed-feature {
     background: #171321;
+    color: #fff;
     margin-top: 450px;
-    padding-top: 150px;
+    padding-top: 250px;
+    padding-bottom: 96px;
+    /* padding: 64px 0 32px; */
 }
 
 
@@ -555,7 +568,6 @@ a.info {
 }
 
 .case-study-tabpanel-0 {
-    width: 50%;
     margin-right: 32px;
 }
 
@@ -617,7 +629,6 @@ a.info {
     margin-bottom: 32px;
     margin-top: 32px;
     position: relative;
-    width: 50%;
 }
 
 .tabbed-case-studies__quote {
@@ -689,7 +700,7 @@ a.info {
 
 .recognition-spotlight-row {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .recognition-spotlight-leading {
@@ -1018,6 +1029,10 @@ a.pricing {
 }
 
 @media screen and (min-width: 576px) {
+
+    /* .tabbed-features {
+        padding: 48px 0 64px;
+    } */
     .tabbed-case-logo {
         margin-bottom: 64px;
         margin-right: auto;
@@ -1051,10 +1066,6 @@ a.pricing {
     .next-step-alt__container {
         padding: 64px;
     }
-
-    .be-nav-footer {
-        margin-top: 500px;
-    }
 }
 
 @media screen and (min-width: 640px) {
@@ -1070,11 +1081,13 @@ a.pricing {
         flex-wrap: wrap;
     }
 
-    .information-img {
-        flex-wrap: nowrap;
-    }
+    .information-title .button {
+        justify-content: center;
+        margin-top: 16px;
+        width: 100%;
+    } 
 
-    .platform {
+    .platform-flex{
         flex-wrap: wrap;
     }
 
@@ -1096,12 +1109,81 @@ a.pricing {
     .feature-showcase {
         flex-wrap: wrap;
     }
+
+    .feature-showcase_row:last-of-type {
+        padding-left: 0;
+    }
+
+    .feature-showcase_card{
+        flex-wrap: wrap;
+    }
+
+    .tabbed-feature-row{
+        flex-wrap: wrap;
+    }
+
+    .case-study-tabpanel{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .recognition-spotlight-row{
+        flex-wrap: wrap;
+    }
+    .recognition-spotlight-leading{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .recognition-spotlight-data{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .recognition-spotlight__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .recognition-spotlight__badges{
+        gap: 0;
+    }
+
+    .next-step-alt__col-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .slp-row{
+        flex-wrap: wrap;
+    }
+
+    .convenience-list{
+        margin-bottom: 32px;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .customer-logos_companies {
         justify-content: space-between;
     }
+
+    .feature-showcase__card {
+        border-radius: 8px 0 0 8px;
+        margin-bottom: 0;
+        padding: 32px;
+    }
+
+    .feature-showcase__card:first-of-type:not(:last-of-type) {
+        border-radius: 0 8px 0 0;
+    }
+
+    .feature-showcase__card:last-of-type:not(:first-of-type) {
+        border-radius: 0 0 90px 0;
+    }
+
+    /* .tabbed-features{
+        padding: 96px 0 64px;
+    } */
 
     .recognition-spotlight-stats {
         margin: 0 0 96px;
@@ -1186,10 +1268,10 @@ a.pricing {
 }
 
 @media screen and (max-width: 1025px) {
+    .header-list div {
+        visibility: hidden;
+    }
 
-    /* .header-list {
-        display: none;
-    } */
     .information-title {
         margin-left: 0px;
     }
