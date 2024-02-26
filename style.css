@@ -23,7 +23,7 @@ ul {
     display: block;
 }
 .mobile{
-    visibility: hidden;
+    display: none;
     width: 0;
     height: 0;
 }
@@ -1040,19 +1040,9 @@ a.pricing {
     .platform img {
         display: none;
     }
-
-    .mobile{
-        display: block;
-    }
-    .desktop{
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
 }
 
-@media screen and (min-width: 576px) {
-
+@media screen and (min-width: 577px) {
     /* .tabbed-features {
         padding: 48px 0 64px;
     } */
@@ -1100,6 +1090,14 @@ a.pricing {
 }
 
 @media screen and (max-width: 768px) {
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+        width: 0;
+        height: 0;
+    }
     .information {
         flex-wrap: wrap;
     }
