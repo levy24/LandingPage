@@ -9,8 +9,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    width: 100%;
 }
-
 p {
     margin: 0;
 }
@@ -66,18 +66,26 @@ ul {
     right: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;
+}
+
+.be-navigation-desktop{
+    display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
     padding: 4px 24px 16px;
-    z-index: 1000;
     height: 80px;
 }
 
+.be-navigation-mobile{
+    display: none;
+}
 
 .header-list {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 16px;
@@ -107,6 +115,10 @@ ul {
 .header-list.icon {
     padding: 8px;
     color: black;
+}
+
+.main_menu:hover{
+
 }
 
 div.button {
@@ -233,7 +245,6 @@ div.button {
 /* information */
 
 /* customer-logos */
-
 .customer-logos_companies {
     display: flex;
     justify-content: center;
@@ -1040,6 +1051,22 @@ a.pricing {
     .platform img {
         display: none;
     }
+
+    .be-nav-tablet{
+        display: none;
+    }
+
+    .be-nav-phone{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 4px 24px 16px;
+        height: 80px;
+    }
+    .be-nav-footer {
+    margin-top: 600px;
+    }
 }
 
 @media screen and (min-width: 577px) {
@@ -1140,6 +1167,7 @@ a.pricing {
     }
 
     .tabbed-feature {
+        margin-top: 840px;
         padding-top: 650px;
     }
 
@@ -1195,10 +1223,6 @@ a.pricing {
         max-width: 100%;
         flex-direction: row;
     }
-
-    .be-nav-footer {
-        margin-top: 650px;
-    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1218,10 +1242,6 @@ a.pricing {
 
     .feature-showcase__card:last-of-type:not(:first-of-type) {
         border-radius: 0 0 90px 0;
-    }
-
-    .tabbed-feature {
-        margin-top: 840px;
     }
 
     .recognition-spotlight-stats {
@@ -1278,7 +1298,6 @@ a.pricing {
     .footer__selectors {
         flex-direction: row;
     }
-
 }
 
 @media screen and (max-width: 835px) {
@@ -1307,8 +1326,24 @@ a.pricing {
 }
 
 @media screen and (max-width: 1025px) {
-    .header-list div {
-        visibility: hidden;
+    .be-navigation-desktop{
+        display: none;
+    }
+    .be-navigation-mobile{
+        display: block;
+    }
+
+    .be-nav-phone{
+        display: none;
+    }
+    
+    .be-nav-tablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 4px 24px 16px;
+        height: 80px;
     }
 
     .information-title {
