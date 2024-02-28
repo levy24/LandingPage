@@ -117,10 +117,6 @@ ul {
     color: black;
 }
 
-.main_menu:hover{
-
-}
-
 div.button {
     display: inline-flex;
     background-color: #171321;
@@ -287,10 +283,6 @@ div.button {
 .platform-flex {
     display: flex;
 
-}
-
-.platform-title {
-    padding-left: 96px;
 }
 
 .platform h3 {
@@ -1052,6 +1044,13 @@ a.pricing {
         display: none;
     }
 
+    .be-navigation-desktop{
+        display: none;
+    }
+    .be-navigation-mobile{
+        display: block;
+    }
+
     .be-nav-tablet{
         display: none;
     }
@@ -1167,7 +1166,7 @@ a.pricing {
     }
 
     .tabbed-feature {
-        margin-top: 840px;
+        /* margin-top: 840px; */
         padding-top: 650px;
     }
 
@@ -1325,7 +1324,7 @@ a.pricing {
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1025px) and (min-width: 576px){
     .be-navigation-desktop{
         display: none;
     }
@@ -1363,10 +1362,6 @@ a.pricing {
         padding: 64px 32px 96px;
     }
 
-    .platform-title {
-        padding-left: 32px;
-    }
-
     .platform img {
         padding-left: 96px;
     }
@@ -1387,6 +1382,11 @@ a.pricing {
     }
 }
 
+@media screen and (min-width: 1200px){
+    .information{
+        padding: 64px 96px 96px;
+    }
+}
 @media screen and (min-width: 1220px) {
     .content {
         margin-top: 0;
