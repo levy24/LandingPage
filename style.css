@@ -169,10 +169,11 @@ div.button {
 }
 
 .information-title h1 {
-    font-size: 50px;
+    font-size: 64px;
     font-weight: 600;
-    letter-spacing: -1.4px;
-    line-height: 60px;
+    letter-spacing: -2.1px;
+    line-height: 72px;
+    margin: 0;
 }
 
 .information-title h2 {
@@ -1129,10 +1130,19 @@ a.pricing {
         flex-wrap: wrap;
     }
 
+    .information-title{
+        margin-left: 0px;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
     .information-title .button {
         justify-content: center;
         margin-top: 16px;
         width: 100%;
+    }
+    .information-item{
+        display: none;
     }
 
     .platform-flex {
@@ -1346,9 +1356,9 @@ a.pricing {
         height: 80px;
     }
 
-    .information-title {
+    /* .information-title {
         margin-left: 0px;
-    }
+    } */
 }
 
 @media screen and (min-width: 1024px) {
